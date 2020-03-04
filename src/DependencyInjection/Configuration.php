@@ -23,8 +23,15 @@ class Configuration implements ConfigurationInterface
      */
     public function getConfigTreeBuilder()
     {
-        $treeBuilder = new TreeBuilder();
-        $treeBuilder->root('cmf_routing_auto')
+        $treeBuilder = new TreeBuilder('cmf_routing_auto');
+        if (method_exists($treeBuilder, 'getRootNode')) {
+            $root = $treeBuilder->getRootNode();
+        } else {
+            // BC layer for symfony/config 4.1 and older
+            $root = $treeBuilder->root('cmf_routing_auto');
+        }
+
+        $root
             ->addDefaultsIfNotSet()
             ->children()
                 ->scalarNode('adapter')->info('Use a specific adapter, overrides any implicit selection')->end()
@@ -56,8 +63,13 @@ class Configuration implements ConfigurationInterface
 
     protected function getPersistenceNode()
     {
-        $builder = new TreeBuilder();
-        $persistence = $builder->root('persistence');
+        $builder = new TreeBuilder('persistence');
+        if (method_exists($builder, 'getRootNode')) {
+            $persistence = $builder->getRootNode();
+        } else {
+            // BC layer for symfony/config 4.1 and older
+            $persistence = $builder->root('cmf_routing_auto');
+        }
 
         $persistence
             ->addDefaultsIfNotSet()

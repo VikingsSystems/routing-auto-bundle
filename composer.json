@@ -1,5 +1,5 @@
 {
-    "name": "symfony-cmf/routing-auto-bundle",
+    "name": "cpoint-eu/routing-auto-bundle",
     "description": "Bundle which automatically creates and manages routes for persisted objects",
     "homepage": "http://cmf.symfony.com",
     "license": "MIT",
@@ -11,7 +11,7 @@
     ],
     "require": {
         "php": "^7.1",
-        "symfony/framework-bundle": "^2.8 || ^3.3 || ^4.0",
+        "symfony/framework-bundle": "^2.8 || ^3.3 || ^4.0 || ^5.0",
         "symfony-cmf/routing-auto": "^2.0",
         "symfony-cmf/routing-bundle": "^2.0",
         "aferrandini/urlizer": "1.0.*",
@@ -19,7 +19,7 @@
     },
     "require-dev": {
         "symfony/phpunit-bridge": "^4.2.2",
-        "symfony/yaml": "^2.8 || ^3.3 || ^4.0",
+        "symfony/yaml": "^2.8 || ^3.3 || ^4.0 || ^5.0",
         "matthiasnoback/symfony-dependency-injection-test": "^2.3.1",
         "matthiasnoback/symfony-config-test": "^3.1.1",
         "symfony-cmf/testing": "^2.1.11",
