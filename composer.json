@@ -12,8 +12,8 @@
     "require": {
         "php": "^7.1",
         "cpoint-eu/routing-auto": "^2.0",
+        "cpoint-eu/routing-bundle": "^2.0",
         "symfony/framework-bundle": "^2.8 || ^3.3 || ^4.0 || ^5.0",
-        "symfony-cmf/routing-bundle": "^2.0",
         "aferrandini/urlizer": "1.0.*",
         "phpdocumentor/reflection-docblock": "^3.1, !=3.2.0"
     },
